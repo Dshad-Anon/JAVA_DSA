@@ -1,6 +1,6 @@
 public class Array_Assignments {
 
-    public static boolean isThereDuplicates(int nums[]){
+    public static boolean isThereDuplicates(int[] nums){
         for(int i=0;i<nums.length;i++){
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]==nums[j]){
