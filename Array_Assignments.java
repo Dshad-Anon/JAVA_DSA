@@ -48,24 +48,54 @@ public class Array_Assignments {
     //     return left;
     // }
 
-    public static int buyStock(int[] prices){
-        int buyingPrices = Integer.MAX_VALUE;
-        int max_Profit = 0;
-        for(int i=0;i<prices.length;i++){
-            if(buyingPrices<prices[i]){
-                int profit = prices[i] - buyingPrices;
-                max_Profit = Math.max(max_Profit,profit);   
-            }
-            else{
-                buyingPrices = prices[i];
-            }
-        } 
-        return max_Profit;
+    /* TO BUY AND SELL THE STOCKS 
+    int prices[] = {7,6,4,3,1};
+    System.out.println("The total profit will be: "+ buyStock(prices));
+    */
+    // public static int buyStock(int[] prices){
+    //     int buyingPrices = Integer.MAX_VALUE;
+    //     int max_Profit = 0;
+    //     for(int i=0;i<prices.length;i++){
+    //         if(buyingPrices<prices[i]){
+    //             int profit = prices[i] - buyingPrices;
+    //             max_Profit = Math.max(max_Profit,profit);   
+    //         }
+    //         else{
+    //             buyingPrices = prices[i];
+    //         }
+    //     } 
+    //     return max_Profit;
        
-    }
-    
+    // }
+
+    /* Trapped Water
+     int height[] = {4,2,0,3,2,5};
+     System.out.println("The rainwater is "+getTrappedWater(height));
+     */
+    // public static int getTrappedWater(int[] height){
+    //     // Make a new array from left boundary to right with size same as the prices.
+    //     // Then form a loop that goes from left to right and find the leftMax value in which compare it with the height of last left value there.
+    //     int leftMax[] = new int[height.length];
+    //     leftMax[0] = height[0];
+    //     for(int i=1;i<height.length;i++){
+    //         leftMax[i] = Math.max(leftMax[i-1],height[i]);
+    //     }
+    //     int rightMax[] = new int[height.length];
+    //     rightMax[height.length-1] = height[height.length-1];
+    //     for(int i=height.length-2;i>=0;i--){
+    //         rightMax[i] = Math.max(rightMax[i+1],height[i]);
+    //     }
+    //     int trappedWater = 0;
+    //     // NOW the loop runs as there are two helping auxilary array already.
+    //     for(int i=0;i<height.length;i++){
+    //         // waterLevel = min(leftmax,rightmax)
+    //         int waterLevel = Math.min(leftMax[i],rightMax[i]);
+    //         trappedWater += waterLevel -height[i]; 
+    //     }
+    //     return trappedWater;
+    // }
+        
     public static void main(String[] args){
-      int prices[] = {7,6,4,3,1};
-      System.out.println("The total profit will be: "+ buyStock(prices));
+    
     }
 }
