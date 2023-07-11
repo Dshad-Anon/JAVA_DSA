@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class bubbleSort {
     // public static void getBubbleSorted(int arr[]){
         
@@ -58,8 +60,9 @@ public class bubbleSort {
         }
     }
     public static void main(String[] args){
-        int arr[] = {5,6,3,2,7};
-        insertionSort(arr);
+        int arr[] = {5,4,1,3,2};
+        // Array sort importing it.  Collections.reverseOrder function will help to make it in reverse order.
+        Arrays.sort(arr,0,3);
         printSorted(arr);
     }
 }
