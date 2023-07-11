@@ -83,7 +83,7 @@ public class bubbleSort {
 
     }
     public static void main(String[] args){
-        int arr[] = {5,4,1,3,2};
+        int arr[] = {1,4,1,3,2,5,7};
         countingSort(arr);
         printSorted(arr);
         // Array sort importing it.  Collections.reverseOrder function will help to make it in reverse order.
