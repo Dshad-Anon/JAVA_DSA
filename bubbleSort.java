@@ -17,7 +17,7 @@ public class bubbleSort {
     // }
 
 
-    public static void printSorted(Integer arr[]){
+    public static void printSorted(int arr[]){
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }
@@ -60,10 +60,34 @@ public class bubbleSort {
 
         }
     }
+
+    //Counting Sort
+    public static void countingSort(int arr[]){
+        int largest = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            largest = Math.max(largest,arr[i]);
+        }
+        int count[] = new int[largest+1];
+        for(int i=0;i<arr.length;i++){
+            count[arr[i]]++;
+        }
+        // Sorting
+        int j = 0;
+        for(int i=0;i<count.length;i++){
+            while(count[i]>0){
+                arr[j] = i ;
+                j++;
+                count[i]--;
+            }
+        }
+
+    }
     public static void main(String[] args){
-        Integer arr[] = {5,4,1,3,2};
-        // Array sort importing it.  Collections.reverseOrder function will help to make it in reverse order.
-        Arrays.sort(arr,Collections.reverseOrder());
+        int arr[] = {5,4,1,3,2};
+        countingSort(arr);
         printSorted(arr);
+        // Array sort importing it.  Collections.reverseOrder function will help to make it in reverse order.
+       // Arrays.sort(arr,Collections.reverseOrder());
+        //printSorted(arr);
     }
 }
