@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Matrices {
     public static boolean searchKey(int matrix[][],int key){

@@ -29,9 +29,35 @@ public class numbersInArray {
         System.out.println("The sum of the second row is "+rowSum);
         return rowSum;
     }
+
+    public static void printMatrix(int[][] nums){
+        int row = nums.length;
+        int column = nums[0].length;
+        for(int i=0;i<row;i++){
+            for(int j=0;j<column;j++){
+                System.out.print(nums[i][j]+" ");
+            }
+            System.out.println();
+        }  
+    }
+
+    public static void printTransposeOfMatrix(int[][] nums){
+        int row = nums.length;
+        int column = nums[0].length;
+        int[][] transpose = new int[column][row];
+        for(int i=0;i<row;i++){
+            for(int j=0;j<column;j++){
+                transpose[j][i] = nums[i][j];
+            }
+        }  
+        printMatrix(transpose);
+    }
+    
+
     public static void main(String[] args){
-        int nums[][]= {{1,4,9},{11,4,3},{2,2,3}};
+        int nums[][]= {{2,3,7},{5,6,7}};
         //countOccurences(array, key);
-        sumOfRow(nums);
+        //sumOfRow(nums);
+        printTransposeOfMatrix(nums);
     }
 }
