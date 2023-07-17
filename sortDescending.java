@@ -81,7 +81,7 @@ public class sortDescending {
             count[i]--;
             }}}
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         int arr[] = { 3, 6, 2, 1, 8, 7, 4, 5, 3, 1 };
         countingSortDescending(arr);
         printSortedOne(arr);

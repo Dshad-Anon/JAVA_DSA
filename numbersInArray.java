@@ -54,7 +54,7 @@ public class numbersInArray {
     }
     
 
-    public static void main(String[] args){
+    public static void main(String args[]){
         int nums[][]= {{2,3,7},{5,6,7}};
         //countOccurences(array, key);
         //sumOfRow(nums);

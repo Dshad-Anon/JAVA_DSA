@@ -41,7 +41,7 @@ public class searchSortedMatrix {
         System.out.println("Key not found");
         return false;
     }
-    public static void main(String[] args){
+    public static void main(String args[]){
         int matrix[][] = {{10,20,30,40},
                          {15,25,35,45},
                          {27,29,37,48},

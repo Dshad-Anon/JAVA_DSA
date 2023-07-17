@@ -80,7 +80,7 @@ public class bubbleSort {
         }
 
     }
-    public static void main(String[] args){
+    public static void main(String args[]){
         int arr[] = {1,4,1,3,2,5,7};
         countingSort(arr);
         printSorted(arr);
