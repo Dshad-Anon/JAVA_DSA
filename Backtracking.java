@@ -35,11 +35,29 @@ public class Backtracking {
         //No choice
         findSubsets(str, ans, i+1);
     }
+
+    // TO find and print all the permutations of a string.
+    public static void printPermutations(String str,String ans){
+        //base case
+        if(str.length()==0){
+            System.out.println(ans);
+            return;
+        }
+
+        //recursion
+        for(int i=0;i<str.length();i++){
+            char curr = str.charAt(i);
+            // "abcde" = "ab" + "de" = "abde"
+            String NewStr = str.substring(0, i)+str.substring(i+1); // here ending index means length-1.
+            printPermutations(NewStr, ans+curr);
+        }
+    }
     public static void main(String args[]){
         // int arr[] = new int[5];
         // changeArr(arr,0,1);
         // pritnArr(arr);
         String str = "abc";
-        findSubsets(str,"", 0);
+        //findSubsets(str,"", 0);
+        printPermutations(str,"");
     }
 }
