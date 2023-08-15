@@ -107,10 +107,10 @@ public class DoubleLL {
         dll.addLast(2);
         dll.addLast(3);
         dll.print();
-        System.out.println(dll.size);
+       // System.out.println(dll.size);
         dll.reverse();
         dll.print();
-        System.out.println(dll.size);
+        //System.out.println(dll.size);
           
     } 
 }

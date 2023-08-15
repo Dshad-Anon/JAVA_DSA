@@ -6,8 +6,7 @@ public class DeletenList {
         int data;
         Node next = null;
         public Node(){
-            int data;
-            Node next;
+          
         }
         public static Node head;
         public static Node tail;
