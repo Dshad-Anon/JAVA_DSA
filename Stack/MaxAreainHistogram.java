@@ -5,10 +5,7 @@ package Stack;
 import java.util.Stack;
 
 public class MaxAreainHistogram {
-
-    public static void nextSmallerright(){
-
-    }
+    
     public static void maxArea(int arr[]){
         int nsr[] = new int[arr.length];
         int nsl[] = new int[arr.length];
