@@ -41,6 +41,24 @@ public class LowestCommonAncestor {
         Node lca = path1.get(i-1);
         return lca;
     }
+
+    //2nd approach to calculate the lca.
+    public static Node lca2(Node root,int n1,int n2){
+        if(root==null || root.data == n1 || root.data == n2){
+            return root;
+        }
+        Node leftLca = lca2(root.left,n1,n2);
+        Node rightLca = lca2(root.right,n1,n2);
+        //LeftLca will be in left if right one returns the null.Becuase both left sub tree consist both LCA.
+        if(rightLca==null){
+            return leftLca;
+        }
+        if(leftLca==null){
+            return rightLca;
+        }
+        // If both doesn't contains null then it is divided into two trees. SO root will be the LCA.
+        return root;
+    }
     public static void main(String args[]){
         Node root = new Node(1);
         root.left = new Node(2);
@@ -49,7 +67,7 @@ public class LowestCommonAncestor {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        int n1 = 4,n2= 7;
-        System.out.println(lca(root, n1, n2).data);
+        int n1 = 4,n2= 6;
+        System.out.println(lca2(root, n1, n2).data);
     }
 }
